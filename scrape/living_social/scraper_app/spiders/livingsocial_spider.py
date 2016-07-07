@@ -9,12 +9,11 @@ save to a database (postgres).
 Scrapy spider part - it actually performs scraping.
 """
 
-from scrapy.spider import BaseSpider
-from scrapy.selector import HtmlXPathSelector
+from scraper_app.items import LivingSocialDeal
 from scrapy.contrib.loader import XPathItemLoader
 from scrapy.contrib.loader.processor import Join, MapCompose
-
-from scraper_app.items import LivingSocialDeal
+from scrapy.selector import HtmlXPathSelector
+from scrapy.spider import BaseSpider
 
 
 class LivingSocialSpider(BaseSpider):
